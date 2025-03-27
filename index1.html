@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Tour</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body  class="body1" data-spy="scroll" data-target="#navbarNav" data-offset="50">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="thisnav">
+        <a class="navbar-brand" href="#"><img src="logo.png" height="50px"></a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#places">Places</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#packages">Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="history.html">History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+  
+
+    <!-- Home Section -->
+    <section id="home" class="container-fluid p-0">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="aham1.jpg" class="d-block w-100" alt="Image 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Welcome to Ahmedabad</h5>
+                        <p>Explore the vibrant city of Ahmedabad.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="ahm2.jpg" class="d-block w-100" alt="Image 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Historical Landmarks</h5>
+                        <p>Discover the rich history of the city.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="ahm3.jpg" class="d-block w-100" alt="Image 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Cultural Heritage</h5>
+                        <p>Experience the cultural heritage of Ahmedabad.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+    <!-- Places Section -->
+    <section id="places" class="container mt-5">
+        <h2 class="heading">Places to Visit</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="plc1.jpg" class="card-img-top" alt="Place 1">
+                    <div class="card-body">
+                        <h5 class="card-title"><a id="link1" href="places.html?place=1">sabrmati asaram</a></h5>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="plc2.jpg" class="card-img-top" alt="Place 2">
+                    <div class="card-body">
+                        <h5 class="card-title"><a id="link1" href="places.html?place=2">Sabarmati Riverfront</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="plc3.jpg" class="card-img-top" alt="Place 3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a a id="link1" href="places.html?place=3">Kankaria Lake</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="plc4.jpg" class="card-img-top" alt="Place 4">
+                    <div class="card-body">
+                        <h5 class="card-title"><a a id="link1" href="places.html?place=4">Adalaj Stepwell</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="plc5.jpg" class="card-img-top" alt="Place 5">
+                    <div class="card-body">
+                        <h5 class="card-title"><a a id="link1" href="places.html?place=5">Jama Masjid</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="plc6.jpg" class="card-img-top" alt="Place 6">
+                    <div class="card-body">
+                        <h5 class="card-title"><a id="link1" href="places.html?place=6">Sidi Sayyed Mosque</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="plc7.jpeg" class="card-img-top" alt="Place 7">
+                    <div class="card-body">
+                        <h5 class="card-title"><a id="link1" href="places.html?place=7">Bhadra Fort</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="plc8.jpeg" class="card-img-top" alt="Place 8">
+                    <div class="card-body">
+                        <h5 class="card-title"><a id="link1" href="places.html?place=8">Hutheesing Jain Temple</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="plc9.jpeg" class="card-img-top" alt="Place 9">
+                    <div class="card-body">
+                        <h5 class="card-title"><a a id="link1" href="places.html?place=9">ISKCON Temple</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="plc10.jpeg" class="card-img-top" alt="Place 10">
+                    <div class="card-body">
+                        <h5 class="card-title"><a a id="link1" href="places.html?place=10">Calico Museum of Textiles</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="plc11.jpeg" class="card-img-top" alt="Place 11">
+                    <div class="card-body">
+                        <h5 class="card-title"><a a id="link1" href="places.html?place=11">Akshardham Mandir</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="plc12.jpeg" class="card-img-top" alt="Place 12">
+                    <div class="card-body">
+                        <h5 class="card-title"><a id="link1" href="places.html?place=12">Sarkhej Roza</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="plc13.jpeg" class="card-img-top" alt="Place 13">
+                    <div class="card-body">
+                        <h5 class="card-title"><a id="link1" href="places.html?place=13">VECHAAR Utensils Museum</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="plc14.jpeg" class="card-img-top" alt="Place 14">
+                    <div class="card-body">
+                        <h5 class="card-title"><a id="link1" href="places.html?place=14">Teen Darwaza</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="plc15.jpeg" class="card-img-top" alt="Place 15">
+                    <div class="card-body">
+                        <h5 class="card-title"><a id="link1" href="places.html?place=15">Manek Chowk</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner__container">
+        <div class="section__container">
+          <div class="banner__content">
+            <h2>Discount 10-30% Off</h2>
+            <p>
+              Explore Ahmedabad on a budget with our exclusive travel packages.
+              Whether you're planning a weekend getaway or an extended stay, we
+              offer unbeatable discounts on tours, accommodations, and more. Book
+              now and experience the best of Ahmedabad without breaking the bank.
+            </p>
+            <button>
+                <a href="#packages">See Packages</a>
+            </button>
+          </div>
+        </div>
+      </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+        <h1 class="heading">Packages</h1>
+
+    <div class="box-container">
+        <div class="box">
+                <img src="historic.jpg" height="43%">
+                <div class="content">
+            <div class="icons">
+                    <a href="#"><i class="fa fa-map-marker">Adalaj,Bhadara Fort and more</i></a>
+                    <a href="#"><i class="fa fa-calendar"></i>3-6 Days</a>
+                </div>
+                <h3>Historic places</h3>
+                <p>Visit the Best Historical and Monumental Places like sabarmati ashram,LalBhai dalpatbhai musuem and more</p>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+
+            <div class="box">
+                <img src="family.jpg">
+                <div class="content">
+                <div class="icons">
+                    <a href="#"><i class="fa fa-map-marker">Adalaj,Bhadara Fort and more</i></a>
+                    <a href="#"><i class="fa fa-calendar"></i>4-7 Days</a>
+                </div>
+                <h3>Family Vacation</h3>
+                <p>Spend quality time with your family with our exclusive family package </p>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+            <div class="box">
+                <img src="extended.jpg" height="43%">
+                <div class="content">
+                <div class="icons">
+                    <a href="#"><i class="fa fa-map-marker">Adalaj,Bhadara Fort and more</i></a>
+                    <a href="#"><i class="fa fa-calendar"></i>5-10 Days</a>
+                </div>
+                <h3>Extended Stay</h3>
+                <p>Experience the best of Ahmedabad with our extended stay package. </p>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+    </div>
+        
+    </section>
+
+    <!-- Footer -->
+    <section class="footer"id="footer">
+        <div class="box-container">
+            <div class="box">
+                <p>Follow Us On Our Social Media Handlers</p>
+                <div class="share">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+ </div>
+            </div>
+
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#" class="links"><i class="fa fa-phone"></i>+91 9512643390</a>
+                <a href="#" class="links"><i class="fa fa-phone"></i>+91 9577321290</a>
+                <a href="#" class="links"><i class="fa fa-envelope"></i>citytour12@gmail.com</a>
+                <a href="#" class="links"><i class="fa fa-map-marker"></i>Sanand Circle, Ahmedabad</a>
+            </div>
+
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#home" class="links"><i class="fa fa-arrow-right"></i>Home</a>
+                <a href="#places" class="links"><i class="fa fa-arrow-right"></i>places</a>
+                <a href="#packages" class="links"><i class="fa fa-arrow-right"></i>Packages</a>
+                <a href="history.html" class="links"><i class="fa fa-arrow-right"></i>history</a>
+            </div>
+
+           
+        </div>
+        <div class="credit">Created by <span>G-2</span> | All Rights Reserved</div>
+    </section>
+</body>
+</html>

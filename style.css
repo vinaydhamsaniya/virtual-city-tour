@@ -1,0 +1,409 @@
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        background: rgb(176, 249, 254);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+*{
+    text-transform: capitalize;
+}
+
+.btn {
+    border: .1rem solid var(--black);
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.8rem; 
+    border-radius: .5rem;
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover {
+    background: var(--green);
+    color: #fff;
+}
+
+.navbar {
+    background-color: bisque;
+    padding: 1rem;
+}
+
+.navbar-nav {
+justify-content: center;
+width: 100%;
+}
+
+.navbar-brand {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    color: #343a40;
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent;
+}
+
+.navbar-toggler-icon 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        background: rgb(176, 249, 254);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+#link1{
+    color: #000000;
+}
+
+/* Carousel styling */
+.carousel-inner img {
+    height: 100vh; /* Full viewport height */
+    object-fit: cover;
+}
+
+.carousel {
+    max-width: 100%; /* Full width */
+    margin: 0 auto; /* Center the carousel */
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.carousel-caption h5, .carousel-caption p {
+    color: #ffffff; /* White text color */
+}
+
+/* History section styling */
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+details {
+    margin: 10px 0;
+    border-left: 4px solid #1e3c72;
+    background: #e3f2fd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+summary {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #1e3c72;
+    padding: 10px;
+}
+
+summary:hover {
+    color: #2a5298;
+}
+
+p {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* History section styling */
+
+/* Footer styling */
+footer {
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+footer h5 {
+    font-family: 'Georgia', serif;
+}
+
+footer p, footer label {
+    font-family: 'Verdana', sans-serif;
+}
+
+/* Fullscreen history section */
+#history {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Places section styling */
+.heading {
+    font-family: 'Georgia', serif;
+    text-align: center;
+    margin-bottom: 44px;
+    color: rgb(16, 89, 98);
+    
+}
+.container{
+    width: 90%!important;
+    max-width: 100%!important;
+}
+#places .card {
+    transition: transform 0.2s;
+    height: 100%; /* Ensure all cards are the same height */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Add space between cards */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+#places .card:hover {
+    transform: scale(1.05);
+}
+
+#places .card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 200px; /* Set a fixed height for images */
+    object-fit: cover;
+}
+
+#places .card-body {
+    background-color: #f8f9fa;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    flex-grow: 1; /* Ensure the card body takes up remaining space */
+}
+
+#places .card-title {
+    font-family: 'Georgia', serif;
+    color: #343a40;
+}
+
+#places .card-text {
+    font-family: 'Verdana', sans-serif;
+    color: #6c757d;
+}
+
+/* Add space between cards */
+#places .col-md-4 {
+    margin-bottom: 20px;
+}
+
+/* Banner section styling */
+.banner__container {
+    background-image: url("banner.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .banner__container .section__container {
+    padding: 10rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .banner__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    color: var(--extra-light);
+  }
+  
+  .banner__content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  
+  .banner__content button {
+    padding: 0.5rem 2rem;
+    outline: none;
+    border: 2px solid var(--secondary-color);
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  /* Packages section styling */
+
+  .packages .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 1.5rem;
+    overflow: hidden;
+  }
+
+  .packages .box-container .box
+  {
+    border-radius: .5rem;
+  }
+
+  .packages .box-container .box .content
+{
+    border: 1px solid black;
+    padding: 2rem;
+}
+
+  .packages .box-container .box .content .icons
+  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom:.2rem black;
+    
+  }
+
+  .packages .box-container .box .content .icons a
+{
+    color: green;
+    font-size: 1.1rem;
+}
+
+.packages .box-container .box .content .icons a i
+{
+    color: green;
+    padding-right: .5rem;
+    font-size: 1.1rem;
+}
+
+
+
+  .packages .box-container .box img {
+    width: 100%;
+    border-radius: .5rem;
+    overflow: hidden;
+  }
+
+
+
+/* Footer */
+.footer {
+    background: rgb(203, 202, 202);
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 1.5rem;
+}
+
+
+.footer .box-container .box .links {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .links i {
+    color: var(--green);
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+
+.footer .box-container .box .links:hover i {
+    padding-right: 1rem;
+    zoom: normal;
+}
+
+.footer .box-container .box p {
+    line-height: 1.8;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+    padding-left: 1rem;
+}
+
+.footer .box-container .box .share a {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    background: #eee;
+ text-align: center;
+}
+
+.footer .box-container .box .share a:hover {
+    background: var(--green);
+    color: white;
+}
+
+.footer .box-container .box .email {
+    margin: .7rem 0;
+    background: #eee;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    width: 100%;
+}
+
+.footer .box-container .box .payment-img {
+    margin-top: 2rem;
+    height: 3rem;
+}
+
+.footer .credit {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    padding-top: 1rem;
+    font-size: 2rem;
+    color: var(--black);
+    border-top: 2px solid black;
+}
+
+.footer .credit span {
+    color: var(--green);
+}
+
+
+

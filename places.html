@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Details</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const placeId = urlParams.get('place');
+            const places = {
+                1: {
+                    title: "Sabarmati Ashram",
+                    img: "plc1.jpg",
+                    description: "Sabarmati Ashram is a peaceful abode on the banks of Sabarmati River. As a place which witnessed the initiation of many freedom movements and where Mahatma Gandhi spent some of his notable years, this Ashram is a major landmark of Ahmedabad. It stands as a testimony to the efforts of Mahatma Gandhi during the pre-Independence era. The ashram today serves mainly as a museum and is divided into different sections depicting different parts of Gandhiji’s life. The exhibition consists of paintings and photos highlighting various events. You can also see some of the letters exchanged between him and other prominent personalities of the time.Along with the museum, the ashram complex houses a library, photo gallery and Hriday Kunj – Mahatma Gandhi’s cottage. It has been maintained well and exhibits many of his personal belongings, including the iconic spinning wheel. Sabarmati Ashram also has Vinobha Mira Kutir, Udyog Mandir and Upasana Mandir among other spots. The place is about 7 km from the railway station and the airport.f you’re interested in knowing more about the life of Mahatma Gandhi, don’t forget to visit the library there. It has a vast collection of books related to his life and other events around freedom movements. The library also stocks various periodicals printed in English, Gujarati and Hindi.Sabarmati Riverfront is over 10 km long and provides a spectacular view of the river and the life on either side. Apart from being a charming place to get rid of boredom and exhaustion, the riverfront also has ghats for boating on Sabarmati and other water-related activities"
+                },
+                2: {
+                    title: "Sabarmati Riverfront",
+                    img: "plc2.jpg",
+                    description: "The stunning Sabarmati Riverfront is one of the recent developments and also, among the must-see places to visit in Ahmedabad in the evening. You can get there any time during the day but evenings are the perfect – either for a walk or to sit there, looking at the landscape.The government undertook the project to improve the environmental conditions, promote tourism and also ‘save’ the Sabarmati river. The construction consists of a two-level promenade on both banks. While the lower level is reserved only for pedestrians and cyclists, the upper level features parks, plazas and open areas for leisure activities and events."
+                },
+                3: {
+                    title: "Kankaria Lake",
+                    img: "plc3.jpg",
+                    description: "Earlier called Hauj-e-Kutub, Kankaria Lake is one of the top tourist spots in Ahmedabad. The toy train ride, balloon ride and various water-based activities make it popular among tourists, and also, a local favourite.One of the striking and most beautiful features of Kankaria Lake is the garden – Nagina Wadi, constructed amidst water. You can reach it through the beautiful walkway that connects it to Kankaria Lake Waterfront. Apart from visiting the garden and indulging in water activities, the toy train ride is a must-try. It takes you around this large lake. Other than the different types of entertainment activities, the complex also has a zoo nearby.Such a myriad of experiences in one place makes Kankaria Lake one of the recommended places to visit in Ahmedabad with friends and family alike. It’s only 3 km away from the railway station. And if you happen to be around in the last week of December, you can also be a part of the colourful carnival."
+                },
+                4: {
+                    title: "Adalaj Stepwell",
+                    img: "plc4.jpg",
+                    description: "Stepwells used to be the only source of water in the old days. Whether people needed water for drinking or performing other household chores, they needed to get it from one of those. Therefore, people took special care of the stepwells.Apart from being a life-saver during water crisis, Adalaj Stepwell (or Adalaj ni vav, in Gujarati) is also an impressive piece of architecture. It is situated about 20 km away from Ahmedabad and was built in the 15th century by order of queen Rudabai. It is a classic five-storey monument adorned with detailed carvings on the walls.Adalaj ni vav has been built in the Indo-Islamic style. At various levels inside the monument, the graphics, symbolic of Islamic structures, blend seamlessly with different Hindu symbols. Apart from the religious icons, the artists also adorned the walls with figurines depicting day to day activities.A visit to Adalaj Stepwell would be a memorable experience, especially for the history buffs, who can explore the architecture and enjoy the soothing drop in temperature inside. It served as a place of rest, back in the days and it’s comfortable to do so even today. Therefore, Adalaj Stepwell is one of the best places to visit in Ahmedabad in summer."
+                },
+                5: {
+                    title: "Jama Masjid",
+                    img: "plc5.jpg",
+                    description: "AThe Jama Masjid (also called Jumma Masjid) is a sacred mosque and one of the outstanding places to visit in Old City Ahmedabad. Built by Sultan Ahmed Shah, the founder of the city, this mosque stands firm upon 260 intricately carved pillars. Once there were two beautiful minarets near the main gateway, but they collapsed in an earthquake.This tourist spot is at a distance of 2 km from the railway station.Near the eastern entrance to the mosque, is the tomb of Sultan Ahmed Shah. This mausoleum has the graveyard of Ahmed Shah I. Two other rulers – Mohammed Shah and Qutub-ud-Din Ahmed Shah II are also buried there. They are the son and grandson of Ahmed Shah I, respectively. The tombs of his queens are across the main road, marked by Rani-no-Hajiro."
+                },
+                6: {
+                    title: "Sidi Sayyed Mosque",
+                    img: "plc6.jpg",
+                     description: "The Sidi Sayyed Mosque near Jama Masjid is another famous mosque in Ahmedabad, known for its elegant architecture. Sidi Sayyed built it in 1573 while serving in the army of Shams-ud-Din Muzaffar Shah III. It is constructed in Indo-Islamic style, using yellow sandstone and is renowned for its carved windows with stone latticework.The work on the panels is so delicate that the place is popularly called Sidi Sayyed ni Jali locally. (Jali refers to the latticed windows here The most detailed of those carved windows displays tree foliage and its branches intertwining to form a mesh-like structure, which is a proof of the artistic skills available during those times. The beauty of this mosque attracts art lovers and history buffs alike. And you must not miss Sidi Sayyed Mosque if you’re looking for places to visit in Ahmedabad for photography"
+                },
+                7: {
+                    title: "Bhadra Fort",
+                    img: "plc7.jpeg",
+                    description:"Another architectural marvel built during the reign of Sultan Ahmad Shah is the majestic Bhadra Fort. Spread over an area of about 43 acres, it comprises of a beautiful palace, a mosque, an open courtyard, 14 towers and a temple of Bhadrakali.Legends also say that Goddess Lakshmi appeared and blessed the city to remain wealthy always. Thus, it’s believed that the fort contains hidden treasures.Most of the construction inside the fort have been done with red coloured stones and bear the influence of Indo-Saracenic architecture. The fort served as the royal court. And the nearby royal square – Maidan-e-Shah, used to be the venue for games and other events related to the kingdom.Mughals took it over in 1573 and developed it further. You can still get a glimpse of the Mughal architecture in the carved arches and decorated balconies. Peshwas and Gaekwads invaded it later, in 1583, to establish the Maratha Empire. The historical Teen Darwaza acted as the entrance to the fort in those days. Afterwards, British held Bhadra Fort from 1817 until the country's independence.it has got a long historical timeline to explore, which makes this place one of the noteworthy sites to visit in Ahmedabad. It’s situated at a walking distance from Jama Masjid."
+                },
+                8: {
+                    title: "Hutheesing Jain Temple",
+                    img: "plc8.jpeg",
+                    description: "Situated near the Swaminarayan Temple, Hutheesing Jain Temple is a two-storey structure dedicated to Lord Dharmnath. He was the 15th Jain Tirthankara – a spiritual leader. Built by a prosperous merchant Seth Hutheesing, the temple houses eleven deities. Constructed using white marble, it’s known for its architecture and it stands unwavering on the twelve eloquently adorned stone pillars.Other than the temple, this peaceful complex has a tiled courtyard, lined by 52 shrines. These shrines are dedicated to different Tirthankaras, all beautifully designed and carved. The place is also called Hutheesing Jain Derasar, and it’s among the top places to visit in Ahmedabad.The complex also has a 78-feet high magnificent Manastambha, inspired by the Kirtistambha at Chittore in Rajasthan. It was built in 2003 to commemorate the birth anniversary of Lord Mahavira.Situated amidst spacious and well-managed gardens, the Calico Museum is one of the oldest textile museums in the country. Founded by a businessman, Gautam Sarabhai, and run by the Sarabhai Foundation, this museum has an exclusive collection of textiles and fabric designs. It also consists of artefacts, handicrafts and paintings brought from different parts of the country.The entire textile exhibition is spread across 12 rooms and is divided into two sections, one for royal and historic fabric and the other one has religious clothing.The historic section exhibits textiles used in costumes, carpets and other items in use by the rulers and courtiers in between 15th and 19th century. The religious collection there, has crafts related to rituals, religious clothes and temple decoration, among others. Miniature paintings, bronze objects and antique furniture are also on display in Calico Museum."
+                },
+                9: {
+                    title: "ISKCON Temple",
+                    img: "plc9.jpeg",
+                    description: "SKCON (short for International Society of Krishna Consciousness) is an international not-for-profit organisation. A. C. Bhakti Vedanta Swami Prabhupada formed it to spread the teachings of the Vedas and spirituality. And the ISKCON Temple in Ahmedabad serves the same purpose.You will feel inner peace and happiness in heart from the moment you enter the temple complex. It is spread in an area of 4 acres, and the temple is surrounded by beautiful gardens, fountains and lawns. The architecture is a fusion of Gujarati Sompura and Rajasthani Khamira style. And the ceilings and walls are covered with murals that tell the story of Krishna.You can also observe many different images of Radha and Krishna drawn on the ceilings. Marbled floors, designer columns and detailed art on marbles is a sight to behold.This gorgeous temple, also known as Hare Krishna Mandir and Sri Radha Govind Dham is among the famous holy places in Ahmedabad as well as in Gujarat. Devotees can seek blessings from Radha-Krishna, Rama-Sita, Nitai-Gauri, Hanuman and Subhadraji, among others."
+                },
+                10: {
+                    title: "Calico Museum of Textiles",
+                    img: "plc10.jpeg",
+                    description: "Situated amidst spacious and well-managed gardens, the Calico Museum is one of the oldest textile museums in the country. Founded by a businessman, Gautam Sarabhai, and run by the Sarabhai Foundation, this museum has an exclusive collection of textiles and fabric designs. It also consists of artefacts, handicrafts and paintings brought from different parts of the country.The entire textile exhibition is spread across 12 rooms and is divided into two sections, one for royal and historic fabric and the other one has religious clothing.The historic section exhibits textiles used in costumes, carpets and other items in use by the rulers and courtiers in between 15th and 19th century. The religious collection there, has crafts related to rituals, religious clothes and temple decoration, among others. Miniature paintings, bronze objects and antique furniture are also on display in Calico Museum."
+                },
+                11: {
+                    title: "Akshardham Mandir",
+                    img: "plc11.jpeg",
+                    description: "Religion influences Ahmedabad profoundly and also, the flourishing tourism industry. And therefore, among the places to visit in Ahmedabad, many are beautifully constructed pilgrimage destinations. Akshardham Mandir too is one such point that you must not miss.Noted for its awe-inspiring architecture, the temple is devoted to Lord Swaminarayan. And this sacred site is in Gandhinagar district, about 25 km away from Ahmedabad. It occupies a vast area of 23 acres, with a 100 feet high structure and halls supported by around 100 pillars. Adding to its magnificence, are the large domes and delicate artistic carvings on the stone. The well-kept spacious garden in the premises further contributes towards its beauty.Apart from being a work of breathtaking architecture, Akshardham Mandir also acts as a place for education, enlightenment and entertainment. Along with the 7-foot tall idol of Lord Swaminarayan, the temple consists of over 200 other religious sculptures. You can also enjoy a range of shows there, including the light, sound and water show, and a short movie – Mystic India.."
+                },
+                12: {
+                    title: " Sarkhej Roza",
+                    img: "plc12.jpeg",
+                    description: "Sarkhej Roza is a historic complex built around the artificial Sarkhej Lake. It is located in Makarba village, about 7 km from Ahmedabad.The main attraction is the 105 feet high tomb of Sufi saint Ahmed Khattu Ganj Baksh, in the centre of the complex. He was the spiritual advisor of Ahmed Shah – Ahmedabad’s founder. Other structures in the premises include a small mosque, a palace and the tombs of Mahmud Shah Begada and his queen.Spread across 34 acres, the architecture of Sarkhej Roza has a mix of Hindu and Islamic style. And the main mausoleum, of the saint, is the biggest Roza in Gujarat. Also, the mosque there has a spacious open courtyard and prayer halls. It stands on more than hundred finely carved pillars. Elegant latticework is also visible in the mosque."
+                },
+                13: {
+                    title: "VECHAAR Utensils Museum",
+                    img: "plc13.jpeg",
+                    description: "VECHAAR (Vishalla Environmental Centre for Heritage of Art, Architecture and Research) Utensils Museum is a one-of-a-kind museum in Ahmedabad. This exhibition of utensils used across the country is from the personal collection of Vishalla restaurant's founder.With different fascinating utensils used in rural or urban Indian homes, the museum gives a peek into the country's rich heritage.It has around 4000 daily-use utensils put together in a rustic, village-style hall, divided into two galleries. It's an elaborate display of utensils integral to Indian cooking, from hundreds of years back to modern India. From pressure cookers to large cooking pots and serving bowls to nutcrackers, the museum has a lot to explore.VECHAAR Museum is also an exhibition of the diversity of craftsmanship of the country. While some utensils are simple, others are designed to represent cultural beliefs.The utensils are made with various materials, ranging from brass and bronze to ivory and terracotta. Glass, mud and wooden utensils are also present. Then, you'll find travel-friendly utensils and storage boxes in different shapes and sizes"
+                },
+                14: {
+                    title: "Teen Darwaza",
+                    img: "plc14.jpeg",
+                    description: "teen Darwaza was one of the gates used to enter the historic walled city of Ahmedabad. It served as the eastern entry gate to Bhadra Fort, back in its hay days. Today, much of Teen Darwaza is in ruins. But you can still see the arches and portions of the gate.The area surrounding Teen Darwaza has turned into a street-style shopping complex today. And it's among the famous and busiest shopping areas in the city.Clothes, handbags, wallets and many other accessories are available in the street-side stalls. Meenakari furniture, embroidered tablecloths and mirror studded wall hangings are also sold here at affordable prices. So, if you need souvenirs or gifts for friends, Teen Darwaza is among the best places to visit in Ahmedabad for shopping.Just ensure you bargain the prices, and you can shop to your heart's content.Apart from shopping stores, Lal Darwaza also has different food stalls. They offer everything, from local savouries to a variety of fast-food and sweet dishes popular all over the country."
+                },
+                15: {
+                    title: "Manek Chowk",
+                    img: "plc15.jpeg",
+                    description: "The Manek Chowk square is in a prime location in Old Ahmedabad and enjoys proximity with many historical places like Bhadra Fort, Teen Darwaza and Rani-no-Hajiro. It is known to be the second biggest market in India and one of the places to visit in Ahmedabad at night.The market opens early in the morning with vendors selling vegetables at affordable rates. In the afternoon, it turns into a hub for jewellery and precious gems, and as night falls, the square becomes a bustling street food market. The stalls start setting up around 9 PM and stay until midnight. So, when you’re there, don’t forget to get your hands on some delicious street food of Gujarat.The market is known for its pav bhaji, kulfi and other local cuisines. Sandwiches, dosas and Jamun shots are specialities popular among the locals which you must try. The Manek Chowk is one-stop place to satisfy your food cravings while having a relaxed and fun time after a tiring day wandering around the lanes of Ahmedabad."
+                },
+               
+            };
+
+            if (places[placeId]) {
+                document.getElementById("place-title").innerText = places[placeId].title;
+                document.getElementById("place-img").src = places[placeId].img;
+                document.getElementById("place-description").innerText = places[placeId].description;
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <a class="navbar-brand" href="#">
+            <img src="path/to/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+            City Tour
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#history">History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#places">Places</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#packages">Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#about">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Place Details Section -->
+    <section id="place-details" class="container mt-5">
+        <h2 id="place-title" class="heading">Place Title</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <img id="place-img" src="" class="img-fluid rounded mb-3" alt="Place Image">
+                <p id="place-description">Place description will be displayed here.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <p>Follow Us On Our Social Media Handlers</p>
+                <div class="share">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#" class="links"><i class="fa fa-phone"></i>+91 9512643390</a>
+                <a href="#" class="links"><i class="fa fa-phone"></i>+91 9577321290</a>
+                <a href="#" class="links"><i class="fa fa-envelope"></i>citytour12@gmail.com</a>
+                <a href="#" class="links"><i class="fa fa-map-marker"></i>Sanand Circle, Ahmedabad</a>
+            </div>
+
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#home" class="links"><i class="fa fa-arrow-right"></i>Home</a>
+                <a href="#places" class="links"><i class="fa fa-arrow-right"></i>places</a>
+                <a href="#packages" class="links"><i class="fa fa-arrow-right"></i>Packages</a>
+                <a href="history.html" class="links"><i class="fa fa-arrow-right"></i>history</a>
+            </div>
+            <div class="credit">Created by <span>G-2</span> | All Rights Reserved</div>
+        </div>
+    </section>  
+</body>
+</html>
